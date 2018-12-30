@@ -1,0 +1,42 @@
+html,
+body{
+    width: auto;
+    height: 100%;
+}
+
+body{
+    display: flex;
+}
+
+.wrapper{
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    vertical-align: middle;
+    line-height: 50px;
+    position: relative;  
+    direction: rtl;
+}
+
+input{
+display: none;
+}
+
+label{
+margin-right:40px;
+}
+
+label::after{
+    content:"";
+    position: absolute;
+    background: url(ico-s71a7fdede6.png) no-repeat 0 0;
+    width: 50px;
+    height: 40px;
+}
+
+label:hover::after,
+label:hover ~ label::after,
+input:checked ~ label::after{
+    cursor: pointer;
+    background-position: 0 -40px;
+}
